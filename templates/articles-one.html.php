@@ -1,16 +1,18 @@
 <?php include '_head.html.php';?>
 
-    <?=$this->alerts(); ?>
+<?=$this->alerts(); ?>
 
 <form class="form-horizontal" action="<?=$this->path;?>" method="post">
   <div class="row">
     <div class="col-md-8">
+
       <div class="form-group">
         <label for="title" class="col-sm-3 control-label">Tytuł wpisu</label>
         <div class="col-sm-9">
           <input type="text" class="form-control" name="title" id="title" value="<?=$this->article->title();?>" placeholder="Tytuł" required>
         </div>
       </div>
+
       <div class="form-group">
         <label for="description" class="col-sm-3 control-label">Opis artykułu</label>
         <div class="col-sm-9">
@@ -18,6 +20,7 @@
           <p class="text-muted">Jest widoczny w wynikach wyszukiwania. Staraj się jak najlepiej opisać zawartość artykułu. Opis i słowa kluczowe <b>nie mogą</b> być takie same.</p>
         </div>
       </div>
+
       <div class="form-group">
         <label for="keywords" class="col-sm-3 control-label">Słowa kluczowe</label>
         <div class="col-sm-9">
@@ -25,6 +28,7 @@
           <p class="text-muted">Choć ten tag tak samo jak <u>opis</u> <b>nie wpływa</b> na pozycję strony w wynikach wyszukiwania, warto go uzupełnić słowami kluczowymi, z których mogą korzystać mniej znane wyszukiwarki.</p>
         </div>
       </div>
+
       <div class="form-group">
         <label for="date" class="col-sm-3 control-label">Data wyświetlana</label>
         <div class="col-sm-9">
@@ -33,6 +37,7 @@
           <p class="text-muted">Data dodania, wyświetlana odwiedzającym stronę. Choć można ją zmienić, zalecane jest by przedstawiała prawdziwą datę publikacji artykułu.</p>
         </div>
       </div>
+
       <div class="form-group">
         <textarea id="content" name="content" class="form-control" rows="15"><?=$this->article->textarea();?></textarea>
       </div>
@@ -102,9 +107,10 @@
           <p class="text-muted">Liczba zdjęć w powiązanym albumie.</p>
         </div>
       </div>
-    </div>
 
+    </div>
     <div class="col-md-4">
+
       <?php if ('edit' === $this->templateType): ?> 
         <input class="btn btn-primary btn-lg btn-block" type="submit" name="update" value="Edytuj">
       <?php else: ?>
