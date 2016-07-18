@@ -108,7 +108,7 @@
       <?php if ('edit' === $this->templateType): ?> 
         <input class="btn btn-primary btn-lg btn-block" type="submit" name="update" value="Edytuj">
       <?php else: ?>
-        <input class="btn btn-primary btn-lg btn-block" type="submit" name="submit" value="Dodaj">
+        <input class="btn btn-primary btn-lg btn-block" type="submit" name="add" value="Dodaj">
       <?php endif;?>
 
       <a class="btn btn-default btn-lg btn-block" href="<?=$this->adminDir();?>/articles">Anuluj</a>
