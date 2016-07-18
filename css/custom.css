@@ -1,9 +1,15 @@
 /**
  * Dashboard custom
  */
+html {
+	position: relative;
+	min-height: 100%;
+}
 body {
 	overflow-y: scroll;
+	margin-bottom: 60px;
 }
+
 .nav-sidebar ul {
 	list-style: none;
 }
@@ -50,13 +56,26 @@ body {
 }
 
 .wrap_container {
-	max-width:310px;
+	max-width: 310px;
 }
-
 .wrap_container a {
 	display: block;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 	width: 98%;
+}
+
+.footer {
+	background-color: #f5f5f5;
+	bottom: 0;
+	height: 60px;
+	left: 0;
+	padding: 20px;
+	position: absolute;
+	width: 100%;
+	color: #555;
+}
+.footer .version {
+	font-style: italic;
 }

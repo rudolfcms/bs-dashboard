@@ -46,7 +46,7 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar" id="nav-sidebar">
-          <?=$this->pageNav('main', 5,
+            <?=$this->pageNav('main', 3,
             [
               'root_ul' => 'nav nav-sidebar',
               'li_active' => 'active open',
