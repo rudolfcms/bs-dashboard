@@ -64,3 +64,4 @@
             <h1><?=$this->pageTitle();?></h1>
           </div>
 
+<?=$this->alerts(); ?>

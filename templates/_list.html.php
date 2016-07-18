@@ -1,7 +1,5 @@
 <?php include '_head.html.php'; ?>
 
-<?=$this->alerts(); ?>
-
 <?php if ($this->loop->isItems()): ?>
 <table class="table table-hover table-striped">
   <thead>

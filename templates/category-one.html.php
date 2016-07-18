@@ -1,7 +1,5 @@
 <?php include '_head.html.php';?>
 
-<?=$this->alerts(); ?>
-
 <form class="form-horizontal" action="<?=$this->path;?>" method="post">
   <div class="row">
     <div class="col-md-8">
