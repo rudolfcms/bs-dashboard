@@ -1,0 +1,62 @@
+/**
+ * Dashboard custom
+ */
+body {
+	overflow-y: scroll;
+}
+.nav-sidebar ul {
+	list-style: none;
+}
+.nav-sidebar li {
+	position: relative;
+}
+.nav-sidebar li .caret-container {
+	padding: 10px 15px;
+	position: absolute;
+	right: 0;
+	top: 0;
+	cursor: pointer;
+	transform: rotate(90deg);
+	transition: transform 0.3s;
+}
+.nav-sidebar li.open > .caret-container {
+	transform: rotate(0deg);	
+}
+.nav-sidebar li.active > .caret-container {
+	color: white;
+}
+.nav-sidebar li a {
+	display: block;
+	text-decoration: none;
+	height: 40px;
+	padding: 10px 20px;
+}
+.nav-sidebar li > ul {
+	display: none;
+	padding-left: 20px;
+}
+.nav-sidebar li.active > ul {
+	display: block;
+}
+.nav-sidebar li.active > a,
+.nav-sidebar li.active > a:hover,
+.nav-sidebar li.active > a:focus {
+	color: #fff;
+	background-color: #428bca;
+}
+
+.fa {
+	width: 20px;
+}
+
+.wrap_container {
+	max-width:310px;
+}
+
+.wrap_container a {
+	display: block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 98%;
+}
