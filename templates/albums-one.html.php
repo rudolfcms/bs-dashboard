@@ -102,7 +102,7 @@
       <div class="panel panel-default">
         <div class="panel-heading">Informacje o albumie</div>
         <ul class="list-group">
-          <li class="list-group-item">Dodano przez: <b><?=$this->album->author();?></b></li>
+          <li class="list-group-item">Dodano przez: <b><?=$this->album->adderFullName();?></b></li>
           <li class="list-group-item">Data dodania: <b><?=$this->album->added();?></b></li>
           <?php if ($this->album->isModified()):?> 
           <li class="list-group-item">Modyfikacja: <b><?=$this->album->modified();?></b></li>

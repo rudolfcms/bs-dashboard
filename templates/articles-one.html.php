@@ -123,7 +123,7 @@
       <div class="panel panel-default">
         <div class="panel-heading">Informacje o wpisie</div>
         <ul class="list-group">
-          <li class="list-group-item">Dodano przez: <b><?=$this->article->author();?></b></li>
+          <li class="list-group-item">Dodano przez: <b><?=$this->article->adderFullName();?></b></li>
           <li class="list-group-item">Data dodania: <b><?=$this->article->added();?></b></li>
           <?php if ($this->article->isModified()):?> 
           <li class="list-group-item">Modyfikacja: <b><?=$this->article->modified();?></b></li>
