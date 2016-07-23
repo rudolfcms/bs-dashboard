@@ -3,7 +3,7 @@
 <div class="row">
   <div class="col-sm-6 col-md-4">
     <div class="thumbnail">
-      <img src="<?=$this->themePath;?>/img/man.jpg" width="250" height="250" alt="avatar"/>
+      <img src="<?=$this->themePath;?>/img/man.jpg" width="250" height="250" alt="avatar">
     </div>
   </div>
   <div class="col-sm-6 col-md-4">

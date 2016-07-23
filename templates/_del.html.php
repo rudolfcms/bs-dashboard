@@ -13,7 +13,7 @@
 
     <div class="panel-footer">
       <a href="<?=DIR;?>/admin/albums/list" class="btn">Anuluj</a>
-      <input name="delete" type="submit" class="btn btn-danger btn-flat pull-right" value="Usuń"/>
+      <input name="delete" type="submit" class="btn btn-danger btn-flat pull-right" value="Usuń">
     </div>
   </div>
 </form>

@@ -51,11 +51,11 @@
               'root_ul' => 'nav nav-sidebar',
               'li_active' => 'active open',
               'sub_ul' => 'nav-sidebar-sub',
-              'li_with_ul' => 'treeview'
+              'li_with_ul' => 'treeview',
             ],
             [],
             [
-              'li_with_ul_a' => '<div class="caret-container"><span class="caret"></span></div>'
+              'li_with_ul_a' => '<div class="caret-container"><span class="caret"></span></div>',
             ]
           ); ?> 
         </div>

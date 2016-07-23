@@ -35,7 +35,7 @@
 				<div class="col-sm-offset-2 col-sm-1">
 					<button type="submit" name="send" class="btn btn-primary">Zaloguj</button>
 				</div>
-				<br/><br/><br/>
+				<br><br><br>
 			</div>
 				
 			<a href="<?=DIR;?>/">&#171; Wróć do strony głównej</a>
