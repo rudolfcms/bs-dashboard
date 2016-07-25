@@ -65,6 +65,9 @@ body {
 	white-space: nowrap;
 	width: 98%;
 }
+.main {
+	top: -20px;
+}
 
 .footer {
 	background-color: #f5f5f5;
