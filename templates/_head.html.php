@@ -69,4 +69,6 @@
             <h1><?=$this->pageTitle();?></h1>
           </div>
 
+          <?=$this->breadcrumb($nesting = 2, ['ul' => 'breadcrumb', 'li_active' => 'active']);?> 
+
 <?=$this->alerts(); ?>
