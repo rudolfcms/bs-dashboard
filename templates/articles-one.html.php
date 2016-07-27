@@ -7,14 +7,14 @@
       <div class="form-group">
         <label for="title" class="col-sm-3 control-label">Tytuł wpisu</label>
         <div class="col-sm-9">
-          <input type="text" class="form-control" name="title" id="title" value="<?=$this->article->title();?>" placeholder="Tytuł" required>
+          <input type="text" class="form-control" name="title" id="title" value="<?=$this->article->title('raw');?>" placeholder="Tytuł" required>
         </div>
       </div>
 
       <div class="form-group">
         <label for="description" class="col-sm-3 control-label">Opis artykułu</label>
         <div class="col-sm-9">
-          <input type="text" id="description" name="description" value="<?=$this->article->description();?>" placeholder="Opis" class="form-control">
+          <input type="text" id="description" name="description" value="<?=$this->article->description('raw');?>" placeholder="Opis" class="form-control">
           <p class="text-muted">Jest widoczny w wynikach wyszukiwania. Staraj się jak najlepiej opisać zawartość artykułu. Opis i słowa kluczowe <b>nie mogą</b> być takie same.</p>
         </div>
       </div>
@@ -22,7 +22,7 @@
       <div class="form-group">
         <label for="keywords" class="col-sm-3 control-label">Słowa kluczowe</label>
         <div class="col-sm-9">
-          <input type="text" id="keywords" name="keywords" value="<?=$this->article->keywords();?>" placeholder="Słowa kluczowe" class="form-control">
+          <input type="text" id="keywords" name="keywords" value="<?=$this->article->keywords('raw');?>" placeholder="Słowa kluczowe" class="form-control">
           <p class="text-muted">Choć ten tag tak samo jak <u>opis</u> <b>nie wpływa</b> na pozycję strony w wynikach wyszukiwania, warto go uzupełnić słowami kluczowymi, z których mogą korzystać mniej znane wyszukiwarki.</p>
         </div>
       </div>
@@ -32,7 +32,7 @@
         <div class="col-sm-9">
           <input type="text" id="date" name="date" value="<?=$this->article->date();?>" placeholder="Data wyświetlana" class="form-control">
           <?php //$adminFields->datetimeInput($this->article->date(), 'date', 'form-control', 'date', 'Data wyświetlana');?> 
-          <p class="text-muted">Data dodania, wyświetlana odwiedzającym stronę. Choć można ją zmienić, zalecane jest by przedstawiała prawdziwą datę publikacji artykułu.</p>
+          <p class="text-muted">Data dodania, wyświetlana odwiedzającym stronę. Zalecane jest by przedstawiała prawdziwą datę publikacji artykułu. Zostawiając pole pustym, zostatnie ustawiona data dodania.</p>
         </div>
       </div>
 
@@ -43,15 +43,15 @@
       <div class="form-group">
         <label for="slug" class="col-sm-3 control-label">URL</label>
         <div class="col-sm-9">
-          <input type="text" id="slug" name="slug" value="<?=$this->article->slug();?>" placeholder="URL" class="form-control">
-          <p class="text-muted">Adres pod jakim będzie dostępny artykuł (http://twojastrona.pl/artykuly/<?=$this->article->date('Y');?>/<?=$this->article->date('m');?>/<b>{URL)</b>. Jeśli zostawisz to pole puste, URL zostanie wygenerowany automatycznie.</p>
+          <input type="text" id="slug" name="slug" value="<?=$this->article->slug('raw');?>" placeholder="URL" class="form-control">
+          <p class="text-muted">Adres pod jakim będzie dostępny artykuł (http://twojastrona.pl/artykuly/<?=date('Y');?>/<?=date('m');?>/<b>{URL)</b>. Jeśli zostawisz to pole puste, URL zostanie wygenerowany automatycznie.</p>
         </div>
       </div>
 
       <div class="form-group">
         <label for="author" class="col-sm-3 control-label">Autor wyświetlany</label>
         <div class="col-sm-9">
-          <input type="text" id="author" name="author" value="<?=$this->article->author(false);?>" placeholder="Autor wyświetlany" class="form-control">
+          <input type="text" id="author" name="author" value="<?=$this->article->author('raw', false);?>" placeholder="Autor wyświetlany" class="form-control">
           <p class="text-muted">Autor artykułu. Gdy pole puste, wyświetlanie jako autora osoby która dodała artykuł.</p>
         </div>
       </div>
@@ -72,7 +72,7 @@
       <div class="form-group">
         <label for="thumb" class="col-sm-3 control-label">Miniatura</label>
         <div class="col-sm-9">
-          <input type="text" id="thumb" name="thumb" value="<?=$this->article->thumb();?>" placeholder="Miniatura" class="form-control">
+          <input type="text" id="thumb" name="thumb" value="<?=$this->article->thumb('raw');?>" placeholder="Miniatura" class="form-control">
         </div>
         <?php //$adminFields->pathInput($this->article->thumb(), 'thumb', 'form-control', 'Miniatura', 'thumb');?> 
         <br><br><br>
@@ -93,7 +93,7 @@
       <div class="form-group">
         <label for="album" class="col-sm-3 control-label">Album</label>
         <div class="col-sm-9">
-          <input type="text" id="album" name="album" value="<?=$this->article->album();?>" placeholder="Album" class="form-control">
+          <input type="text" id="album" name="album" value="<?=$this->article->album('raw');?>" placeholder="Album" class="form-control">
           <p class="text-muted">Adres albumu powiązanego z artykułem. Pole puste = brak powiązania.</p>
         </div>
       </div>

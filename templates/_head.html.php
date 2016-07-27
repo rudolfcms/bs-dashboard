@@ -60,7 +60,7 @@
             [
               'li_a_text-container' => 'span',
               'li_a_ico-container' => 'i',
-              'li_a_ico-class_base' => 'fa'
+              'li_a_ico-class_base' => 'fa',
             ]
           ); ?> 
         </div>

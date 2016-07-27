@@ -7,7 +7,7 @@
       <div class="form-group">
         <label for="title" class="col-sm-3 control-label">Tytuł albumu</label>
         <div class="col-sm-9">
-          <input type="text" class="form-control" name="title" id="title" value="<?=$this->album->title();?>" placeholder="Tytuł" required>
+          <input type="text" class="form-control" name="title" id="title" value="<?=$this->album->title('raw');?>" placeholder="Tytuł" required>
         </div>
       </div>
 
@@ -16,14 +16,14 @@
         <div class="col-sm-9">
           <input type="text" id="date" name="date" value="<?=$this->album->date();?>" placeholder="Data wyświetlana" class="form-control">
           <?php //$adminFields->datetimeInput($this->album->date(), 'date', 'form-control', 'date', 'Data wyświetlana');?> 
-          <p class="text-muted">Data dodania, wyświetlana odwiedzającym stronę. Choć można ją zmienić, zalecane jest by przedstawiała prawdziwą datę publikacji albumu.</p>
+          <p class="text-muted">Data dodania, wyświetlana odwiedzającym stronę. Zalecane jest by przedstawiała prawdziwą datę publikacji albumu. Zostawiając pole pustym, zostatnie ustawiona data dodania.</p>
         </div>
       </div>
 
       <div class="form-group">
         <label for="album" class="col-sm-3 control-label">Adres albumu</label>
         <div class="col-sm-9">
-          <input type="text" id="album" name="album" value="<?=$this->album->album();?>" placeholder="Album" class="form-control">
+          <input type="text" id="album" name="album" value="<?=$this->album->album('raw');?>" placeholder="Album" class="form-control" required>
         </div>
       </div>
 
@@ -31,7 +31,7 @@
         <label for="thumb" class="col-sm-3 control-label">Miniatura</label>
         <div class="col-sm-9">
           <?php //$adminFields->pathInput($this->album->thumb(), 'thumb', 'form-control', 'Miniatura', 'thumb');?>
-          <input type="text" id="thumb" name="thumb" value="<?=$this->album->thumb();?>" placeholder="Miniatura" class="form-control">
+          <input type="text" id="thumb" name="thumb" value="<?=$this->album->thumb('raw');?>" placeholder="Miniatura" class="form-control" required>
         </div>
         <br><br><br>
         <div class="row">
@@ -59,15 +59,15 @@
       <div class="form-group">
         <label for="slug" class="col-sm-3 control-label">URL</label>
         <div class="col-sm-9">
-          <input type="text" id="slug" name="slug" value="<?=$this->album->slug();?>" placeholder="URL" class="form-control">
-          <p class="text-muted">Adres pod jakim będzie dostępny album (http://twojastrona.pl/artykuly/<?=$this->album->date('Y');?>/<?=$this->album->date('m');?>/<b>{URL)</b>. Jeśli zostawisz to pole puste, URL zostanie wygenerowany automatycznie.</p>
+          <input type="text" id="slug" name="slug" value="<?=$this->album->slug('raw');?>" placeholder="URL" class="form-control">
+          <p class="text-muted">Adres pod jakim będzie dostępny album (http://twojastrona.pl/artykuly/<?=date('Y');?>/<?=date('m');?>/<b>{URL)</b>. Jeśli zostawisz to pole puste, URL zostanie wygenerowany automatycznie.</p>
         </div>
       </div>
 
       <div class="form-group">
         <label for="author" class="col-sm-3 control-label">Autor wyświetlany</label>
         <div class="col-sm-9">
-          <input type="text" id="author" name="author" value="<?=$this->album->author(false);?>" placeholder="Autor wyświetlany" class="form-control">
+          <input type="text" id="author" name="author" value="<?=$this->album->author('raw', false);?>" placeholder="Autor wyświetlany" class="form-control">
           <p class="text-muted">Autor albumu. Gdy pole puste, wyświetlanie jako autora osoby która dodała album.</p>
         </div>
       </div>
