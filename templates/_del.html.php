@@ -1,6 +1,6 @@
 <?php include '_head.html.php';?>
 
-<?php if (!$this->isAlerts()): ?><form method="post" action="<?=$this->path;?>">
+<form method="post" action="<?=$this->path;?>">
   <div class="panel panel-default">
     <div class="panel-heading">Czy na pewno chcesz usunąć?</div>
     <div class="panel-body">
@@ -10,13 +10,11 @@
       </p>
       <p><i class="fa fa-calendar"></i> Data wyświetlana: <b><?=$item->date();?></b></p>
     </div>
-
     <div class="panel-footer">
       <a href="<?=DIR;?>/admin/albums/list" class="btn">Anuluj</a>
       <input name="delete" type="submit" class="btn btn-danger btn-flat pull-right" value="Usuń">
     </div>
   </div>
 </form>
-<?php endif;?>
 
 <?php include '_foot.html.php';?>
