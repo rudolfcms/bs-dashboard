@@ -43,7 +43,7 @@
             </p>
           </div>
           <div class="col-md-6" id="thumbnail-preview">
-            <?=$this->album->thumbnail(300, 250, false, '', 'https://placehold.it/300x250');?> 
+            <?=$this->album->thumbnail(300, 250, false, $this->album->title('raw'), 'https://placehold.it/300x250');?> 
           </div>
         </div>
       </div>

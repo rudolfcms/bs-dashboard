@@ -85,7 +85,7 @@
             </p>
           </div>
           <div class="col-md-6" id="thumbnail-preview">
-            <?=$this->article->thumbnail(300, 250, false, '', 'https://placehold.it/300x250');?> 
+            <?=$this->article->thumbnail(300, 250, false, $this->article->title('raw'), 'https://placehold.it/300x250');?> 
           </div>
         </div>
       </div>
