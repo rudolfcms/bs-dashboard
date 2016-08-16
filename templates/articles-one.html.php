@@ -59,7 +59,7 @@
       <div class="form-group">
         <label for="author" class="col-sm-3 control-label">Kategoria</label>
         <div class="col-sm-9">
-          <select class="form-control select2" name="category_id">
+          <select class="form-control select2" name="category_ID">
             <option value="0">(brak)</option>
             <?php foreach ($this->categories() as $key => $value): ?><option <?=($value['id'] == $this->article->categoryID()) ? 'selected="selected" ' : '';?>value="<?=$value['id'];?>"><?=$value['title'];?></option>
             <?php endforeach; ?> 
