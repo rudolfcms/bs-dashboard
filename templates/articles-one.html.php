@@ -147,7 +147,7 @@
     </div>
 
     </div>
-  </form>
-</section>
+  </div>
+</form>
 
 <?php include '_foot.html.php';?>
