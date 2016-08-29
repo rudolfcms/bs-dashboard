@@ -12,7 +12,7 @@
       </div>
 
       <div class="form-group">
-        <textarea id="content" name="content" class="form-control" rows="10"><?=$this->category->content();?></textarea>
+        <?=$this->adminFields->textarea($this->category->content(), 'content', 'form-control', 'content');?> 
       </div>
 
        <div class="form-group">

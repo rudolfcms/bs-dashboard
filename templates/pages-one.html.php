@@ -31,7 +31,7 @@ include '_head.html.php';?>
       </div>
 
       <div class="form-group">
-        <textarea id="content" name="content" class="form-control" rows="15"><?=$p->textarea();?></textarea>
+        <?=$this->adminFields->textarea($p->textarea(), 'content', 'form-control', 'content');?> 
       </div>
 
       <div class="form-group">

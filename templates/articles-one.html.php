@@ -30,21 +30,20 @@
       <div class="form-group">
         <label for="date" class="col-sm-3 control-label">Data wyświetlana</label>
         <div class="col-sm-9">
-          <input type="text" id="date" name="date" value="<?=$this->article->date();?>" placeholder="Data wyświetlana" class="form-control">
-          <?php //$adminFields->datetimeInput($this->article->date(), 'date', 'form-control', 'date', 'Data wyświetlana');?> 
+          <?=$this->adminFields->datetimeInput($this->article->date(), 'date', 'form-control', 'date', 'Data wyświetlana');?> 
           <p class="text-muted">Data dodania, wyświetlana odwiedzającym stronę. Zalecane jest by przedstawiała prawdziwą datę publikacji artykułu. Zostawiając pole pustym, zostatnie ustawiona data dodania.</p>
         </div>
       </div>
 
       <div class="form-group">
-        <textarea id="content" name="content" class="form-control" rows="15"><?=$this->article->textarea();?></textarea>
+        <?=$this->adminFields->textarea($this->article->textarea(), 'content', 'form-control', 'content');?> 
       </div>
 
       <div class="form-group">
         <label for="slug" class="col-sm-3 control-label">URL</label>
         <div class="col-sm-9">
           <input type="text" id="slug" name="slug" value="<?=$this->article->slug('raw');?>" placeholder="URL" class="form-control">
-          <p class="text-muted">Adres pod jakim będzie dostępny artykuł (http://twojastrona.pl/artykuly/<?=date('Y');?>/<?=date('m');?>/<b>{URL)</b>. Jeśli zostawisz to pole puste, URL zostanie wygenerowany automatycznie.</p>
+          <p class="text-muted">Adres pod jakim będzie dostępny artykuł (np. http://twojastrona.pl/artykuly/<?=date('Y');?>/<?=date('m');?>/<b>{URL)</b>. Jeśli zostawisz to pole puste, URL zostanie wygenerowany automatycznie.</p>
         </div>
       </div>
 
@@ -72,9 +71,8 @@
       <div class="form-group">
         <label for="thumb" class="col-sm-3 control-label">Miniatura</label>
         <div class="col-sm-9">
-          <input type="text" id="thumb" name="thumb" value="<?=$this->article->thumb('raw');?>" placeholder="Miniatura" class="form-control">
+           <?=$this->adminFields->pathInput($this->article->thumb('raw'), 'thumb', 'form-control', 'thumb', 'Miniatura');?> 
         </div>
-        <?php //$adminFields->pathInput($this->article->thumb(), 'thumb', 'form-control', 'Miniatura', 'thumb');?> 
         <br><br><br>
         <div class="row">
           <div class="col-md-6">
