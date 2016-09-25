@@ -30,8 +30,7 @@
       <div class="form-group">
         <label for="thumb" class="col-sm-3 control-label">Miniatura</label>
         <div class="col-sm-9">
-          <?php //$adminFields->pathInput($this->album->thumb(), 'thumb', 'form-control', 'Miniatura', 'thumb');?>
-          <input type="text" id="thumb" name="thumb" value="<?=$this->album->thumb('raw');?>" placeholder="Miniatura" class="form-control" required>
+          <?=$this->adminFields->pathInput($this->album->thumb('raw'), 'thumb', 'form-control', 'thumb', 'Miniatura');?> 
         </div>
         <br><br><br>
         <div class="row">
