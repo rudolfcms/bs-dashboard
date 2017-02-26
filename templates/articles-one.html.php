@@ -146,6 +146,20 @@
      </div>
     </div>
 
+    <!-- options box -->
+    <div class="panel panel-default">
+     <div class="panel-body">
+        <p><i class="fa fa-eye"></i> Widoczność:
+          <b><?=($this->article->isHomepageHidden()) ? 'Niewidoczny na głównej' : 'Widoczny wszędzie';?></b>
+        </p>
+        <label>
+          <input type="checkbox" name="homepage_hidden" class="minimal"<?=($this->article->isHomepageHidden()) ? ' checked' : '';?>>&nbsp;
+        <?php if (!$this->article->isHomepageHidden()):?>Zaznacz, by ukryć na stronie głównej<?php else:?>Odznacz, by ponownie pokazać na stronie głównej<?php endif;?>
+        </label>
+        <p class="text-muted">Ukryty artykuł będzie widoczny tylko w widoku kategorii.</p>
+     </div>
+    </div>
+
     </div>
   </div>
 </form>
