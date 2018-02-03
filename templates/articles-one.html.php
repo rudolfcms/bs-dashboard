@@ -30,7 +30,7 @@
       <div class="form-group">
         <label for="date" class="col-sm-3 control-label">Data wyświetlana</label>
         <div class="col-sm-9">
-          <?=$this->adminFields->datetimeInput($this->article->date(), 'date', 'form-control', 'date', 'Data wyświetlana');?> 
+          <?=$this->adminFields->dateInput($this->article->date(), 'date', 'form-control', 'date', 'Data wyświetlana');?>
           <p class="text-muted">Data dodania, wyświetlana odwiedzającym stronę. Zalecane jest by przedstawiała prawdziwą datę publikacji artykułu. Zostawiając pole pustym, zostatnie ustawiona data dodania.</p>
         </div>
       </div>
