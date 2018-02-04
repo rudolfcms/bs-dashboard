@@ -6,7 +6,7 @@
     <div class="panel-body">
       <p>Tytuł: <b><?=$item->title();?></b></p>
       <p><i class="fa fa-key"></i>
-        Status: <b><?=($item->isPublished()) ? 'opublikowany' : 'szkic';?></b>
+        Status: <b><?= $item->isPublished() ? 'opublikowany' : 'szkic';?></b>
       </p>
       <p><i class="fa fa-calendar"></i> Data wyświetlana: <b><?=$item->date();?></b></p>
     </div>
@@ -17,4 +17,4 @@
   </div>
 </form>
 
-<?php include '_foot.html.php';?>
+<?php include '_foot.html.php';
