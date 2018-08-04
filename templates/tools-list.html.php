@@ -25,7 +25,7 @@
 <?php endif;?> 
 
 <?php else: ?> 
-  <div class="alert info">Brak narzędzi do wyświetlenia!</div>
+  <div class="alert alert-info">Brak narzędzi do wyświetlenia!</div>
 <?php endif;?> 
 
 <?php include '_foot.html.php'; ?>

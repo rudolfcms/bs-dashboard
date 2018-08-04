@@ -37,7 +37,7 @@
 <?php endif;?> 
 
 <?php else: ?> 
-  <div class="alert info">Brak artykułów do wyświetlenia!</div>
+  <div class="alert alert-info">Brak artykułów do wyświetlenia!</div>
 <?php endif;?> 
 
 <?php include '_foot.html.php'; ?>
