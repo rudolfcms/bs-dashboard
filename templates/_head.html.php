@@ -13,7 +13,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="<?=$this->adminDir();?>">Zespół Szkół w Rokietnicy</a>
+          <a class="navbar-brand" href="<?=$this->adminDir();?>"><?=strip_tags(GENERAL_SITE_NAME);?></a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
