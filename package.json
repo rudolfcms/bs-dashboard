@@ -1,6 +1,6 @@
 {
   "name": "bs-dashboard",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "bsdashboard theme for Rudolf",
   "main": "index.js",
   "scripts": {
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/rudolfcms/bs-dashboard#readme",
   "dependencies": {
-    "bootstrap": "^3.3.7"
+    "bootstrap": "^4.1.3",
+    "jquery": "^3.3.1"
   }
 }
