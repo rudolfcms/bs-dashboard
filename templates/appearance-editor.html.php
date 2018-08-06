@@ -1,4 +1,8 @@
-<?php include '_head.html.php';?>
+<?php
+
+/** @var \Rudolf\Modules\Appearance\Editor\EditorView $this */
+
+include '_head.html.php';?>
 
 <div class="row">
   <div class="col-md-3">
@@ -30,4 +34,4 @@
   </div>
 </div>
 
-<?php include '_foot.html.php';?>
+<?php include '_foot.html.php';

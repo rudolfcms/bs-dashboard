@@ -1,4 +1,9 @@
-<?php include '_head.html.php';?>
+<?php
+
+/** @var \Rudolf\Modules\Albums\One\Admin\EditView $this */
+/** @var \Rudolf\Modules\Albums\One\Admin\AddView $this */
+
+include '_head.html.php';?>
 
 <form class="form-horizontal" action="<?=$this->path;?>" method="post">
   <div class="row">
@@ -15,7 +20,7 @@
         <label for="date" class="col-sm-3 control-label">Data wyświetlana</label>
         <div class="col-sm-9">
           <input type="text" id="date" name="date" value="<?=$this->album->date();?>" placeholder="Data wyświetlana" class="form-control">
-          <?php //$adminFields->datetimeInput($this->album->date(), 'date', 'form-control', 'date', 'Data wyświetlana');?> 
+          <?php //$adminFields->datetimeInput($this->album->date(), 'date', 'form-control', 'date', 'Data wyświetlana');?>
           <p class="text-muted">Data dodania, wyświetlana odwiedzającym stronę. Zalecane jest by przedstawiała prawdziwą datę publikacji albumu. Zostawiając pole pustym, zostatnie ustawiona data dodania.</p>
         </div>
       </div>
@@ -30,19 +35,19 @@
       <div class="form-group">
         <label for="thumb" class="col-sm-3 control-label">Miniatura</label>
         <div class="col-sm-9">
-          <?=$this->adminFields->pathInput($this->album->thumb('raw'), 'thumb', 'form-control', 'thumb', 'Miniatura');?> 
+          <?=$this->adminFields->pathInput($this->album->thumb('raw'), 'thumb', 'form-control', 'thumb', 'Miniatura');?>
         </div>
         <br><br><br>
         <div class="row">
           <div class="col-md-6">
             <p class="text-muted">
               Miniatura wyróżniająca album.
-              Możesz wpisać ręcznie adres miniatury w pole powyżej, lub użyć menadżera plików, 
+              Możesz wpisać ręcznie adres miniatury w pole powyżej, lub użyć menadżera plików,
               w którym możesz wysłać miniaturę na serwer i który ją automatycznie wstawi.
             </p>
           </div>
           <div class="col-md-6" id="thumbnail-preview">
-            <?=$this->album->thumbnail(300, 250, false, $this->album->title('raw'), 'https://placehold.it/300x250');?> 
+            <?=$this->album->thumbnail(300, 250, false, $this->album->title('raw'), 'https://placehold.it/300x250');?>
           </div>
         </div>
       </div>
@@ -72,12 +77,14 @@
       </div>
 
       <div class="form-group">
-        <label for="author" class="col-sm-3 control-label">Kategoria</label>
+        <label for="category" class="col-sm-3 control-label">Kategoria</label>
         <div class="col-sm-9">
-          <select class="form-control select2" name="category_ID">
+          <select class="form-control select2" id="category" name="category_ID">
             <option value="0">(brak)</option>
-            <?php foreach ($this->categories() as $key => $value): ?><option <?=($value['id'] == $this->album->categoryID()) ? 'selected="selected" ' : '';?>value="<?=$value['id'];?>"><?=$value['title'];?></option>
-            <?php endforeach; ?> 
+            <?php foreach ($this->categories() as $key => $value): ?>
+                <option <?=($value['id'] == $this->album->categoryID()) ? 'selected="selected" ' : '';?>value="<?=$value['id'];?>">
+                    <?=$value['title'];?></option>
+            <?php endforeach; ?>
           </select>
           <a href="<?=$this->album->addCategory();?>" target="_blank">Dodaj kategorię</a>
           <p class="text-muted">Po dodaniu kategorii, by wyświetliła się w menu powyżej, wymagane jest odświeżenie strony.</p>
@@ -87,15 +94,15 @@
     </div>
     <div class="col-md-4">
 
-      <?php if ('edit' === $this->templateType): ?> 
+      <?php if ('edit' === $this->templateType): ?>
         <input class="btn btn-primary btn-lg btn-block" type="submit" name="update" value="Edytuj">
       <?php else: ?>
         <input class="btn btn-primary btn-lg btn-block" type="submit" name="add" value="Dodaj">
       <?php endif;?>
 
       <a class="btn btn-default btn-lg btn-block" href="<?=$this->adminDir();?>/albums">Anuluj</a>
-     
-      <?php if ('edit' === $this->templateType): ?> 
+
+      <?php if ('edit' === $this->templateType): ?>
       <a class="btn btn-danger btn-lg btn-block" href="<?=$this->album->delUrl();?>">Usuń</a>
       <hr>
       <div class="panel panel-default">
@@ -103,10 +110,10 @@
         <ul class="list-group">
           <li class="list-group-item">Dodano przez: <b><?=$this->album->adderFullName();?></b></li>
           <li class="list-group-item">Data dodania: <b><?=$this->album->added();?></b></li>
-          <?php if ($this->album->isModified()):?> 
+          <?php if ($this->album->isModified()):?>
           <li class="list-group-item">Modyfikacja: <b><?=$this->album->modified();?></b></li>
           <li class="list-group-item">Ostatnio edytował: <b><?=$this->album->modifierFullName();?></b></li>
-          <?php endif; ?> 
+          <?php endif; ?>
           <li class="list-group-item">Liczba odsłon: <b><?=$this->album->views();?></b></li>
           <li class="list-group-item">Odnośnik do albumu: <b><a target="_blank" href="<?=$this->album->url();?>">zobacz album</a></b></li>
         </ul>
@@ -119,10 +126,10 @@
     <div class="panel panel-default">
      <div class="panel-body">
         <p><i class="fa fa-key"></i> Status:
-          <b><?=($this->album->isPublished()) ? 'opublikowany' : 'szkic';?></b>
+          <b><?= $this->album->isPublished() ? 'opublikowany' : 'szkic';?></b>
         </p>
         <label>
-          <input type="checkbox" name="published" class="minimal"<?=($this->album->isPublished()) ? ' checked' : '';?>>&nbsp;
+          <input type="checkbox" name="published" class="minimal"<?=$this->album->isPublished() ? ' checked' : '';?>>&nbsp;
         <?php if (!$this->album->isPublished()):?>Zaznacz, by opublikować<?php else:?>Odznacz, by zamienić w szkic<?php endif;?>
         </label>
      </div>
@@ -132,4 +139,4 @@
   </div>
 </form>
 
-<?php include '_foot.html.php';?>
+<?php include '_foot.html.php';

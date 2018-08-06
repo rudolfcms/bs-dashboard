@@ -1,4 +1,11 @@
-<?php include '_head.html.php';?>
+<?php
+
+/** @var \Rudolf\Modules\Articles\One\Admin\DelView $this */
+/** @var \Rudolf\Modules\Albums\One\Admin\DelView $this */
+/** @var \Rudolf\Modules\Articles\One\Admin\Article $item */
+/** @var \Rudolf\Modules\Albums\One\Admin\Album $item */
+
+include '_head.html.php';?>
 
 <form method="post" action="<?=$this->path;?>">
   <div class="panel panel-default">

@@ -1,4 +1,8 @@
-<?php include '_head.html.php';?>
+<?php
+
+/** @var \Rudolf\Modules\Users\One\Admin\Profile\View $this */
+
+include '_head.html.php';?>
 
 <div class="row">
   <div class="col-sm-6 col-md-4">
@@ -21,4 +25,4 @@
   </div>
 </div>
 
-<?php include '_foot.html.php';?>
+<?php include '_foot.html.php';

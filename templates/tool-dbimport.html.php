@@ -1,4 +1,8 @@
-<?php include '_head.html.php'; ?>
+<?php
+
+/** @var \Rudolf\Modules\Tools\Admin\One\DatabaseImport\View $this */
+
+include '_head.html.php'; ?>
 
 <form method="post" enctype="multipart/form-data">
     <div class="form-group">

@@ -1,4 +1,11 @@
-<?php include '_head.html.php';?>
+<?php
+
+/** @var \Rudolf\Modules\Albums\Category\One\Admin\EditView $this */
+/** @var \Rudolf\Modules\Articles\Category\One\Admin\EditView $this */
+/** @var \Rudolf\Modules\Albums\Category\One\Admin\AddView $this */
+/** @var \Rudolf\Modules\Articles\Category\One\Admin\AddView $this */
+
+include '_head.html.php';?>
 
 <form class="form-horizontal" action="<?=$this->path;?>" method="post">
   <div class="row">
@@ -70,4 +77,4 @@
   </div>
 </form>
 
-<?php include '_foot.html.php';?>
+<?php include '_foot.html.php';

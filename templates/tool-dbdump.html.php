@@ -1,4 +1,8 @@
-<?php include '_head.html.php'; ?>
+<?php
+
+/** @var \Rudolf\Modules\Tools\Admin\One\DatabaseDump\View $this */
+
+include '_head.html.php'; ?>
 
 <form method="post">
   <input type="hidden" name="backup">

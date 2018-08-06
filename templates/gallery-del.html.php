@@ -1,4 +1,8 @@
-<?php include '_head.html.php';?>
+<?php
+
+/** @var \Rudolf\Modules\Galleries\One\Admin\DelView $this */
+
+include '_head.html.php';?>
 
 <form method="post" action="<?=$this->path;?>">
   <div class="panel panel-default">
@@ -13,4 +17,4 @@
   </div>
 </form>
 
-<?php include '_foot.html.php';?>
+<?php include '_foot.html.php';

@@ -1,4 +1,9 @@
-<?php include '_head.html.php';?>
+<?php
+
+/** @var \Rudolf\Modules\Galleries\One\Admin\AddView $this */
+/** @var \Rudolf\Modules\Galleries\One\Admin\EditView $this */
+
+include '_head.html.php';?>
 
 <form class="form-horizontal" action="<?=$this->path;?>" method="post" enctype="multipart/form-data">
   <div class="row">
@@ -127,4 +132,4 @@
   </div>
 </form>
 
-<?php include '_foot.html.php';?>
+<?php include '_foot.html.php';

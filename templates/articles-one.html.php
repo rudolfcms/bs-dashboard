@@ -1,4 +1,9 @@
-<?php include '_head.html.php';?>
+<?php
+
+/** @var \Rudolf\Modules\Articles\One\Admin\AddView $this */
+/** @var \Rudolf\Modules\Articles\One\Admin\EditView $this */
+
+include '_head.html.php';?>
 
 <form class="form-horizontal" action="<?=$this->path;?>" method="post">
   <div class="row">
@@ -56,9 +61,9 @@
       </div>
 
       <div class="form-group">
-        <label for="author" class="col-sm-3 control-label">Kategoria</label>
+        <label for="category" class="col-sm-3 control-label">Kategoria</label>
         <div class="col-sm-9">
-          <select class="form-control select2" name="category_ID">
+          <select class="form-control select2" id="category" name="category_ID">
             <option value="0">(brak)</option>
             <?php foreach ($this->categories() as $key => $value): ?><option <?=($value['id'] == $this->article->categoryID()) ? 'selected="selected" ' : '';?>value="<?=$value['id'];?>"><?=$value['title'];?></option>
             <?php endforeach; ?> 
@@ -137,10 +142,10 @@
     <div class="panel panel-default">
      <div class="panel-body">
         <p><i class="fa fa-key"></i> Status:
-          <b><?=($this->article->isPublished()) ? 'opublikowany' : 'szkic';?></b>
+          <b><?=$this->article->isPublished() ? 'opublikowany' : 'szkic';?></b>
         </p>
         <label>
-          <input type="checkbox" name="published" class="minimal"<?=($this->article->isPublished()) ? ' checked' : '';?>>&nbsp;
+          <input type="checkbox" name="published" class="minimal"<?=$this->article->isPublished() ? ' checked' : '';?>>&nbsp;
         <?php if (!$this->article->isPublished()):?>Zaznacz, by opublikować<?php else:?>Odznacz, by zamienić w szkic<?php endif;?>
         </label>
      </div>
@@ -150,10 +155,10 @@
     <div class="panel panel-default">
      <div class="panel-body">
         <p><i class="fa fa-eye"></i> Widoczność:
-          <b><?=($this->article->isHomepageHidden()) ? 'Niewidoczny na głównej' : 'Widoczny wszędzie';?></b>
+          <b><?=$this->article->isHomepageHidden() ? 'Niewidoczny na głównej' : 'Widoczny wszędzie';?></b>
         </p>
         <label>
-          <input type="checkbox" name="homepage_hidden" class="minimal"<?=($this->article->isHomepageHidden()) ? ' checked' : '';?>>&nbsp;
+          <input type="checkbox" name="homepage_hidden" class="minimal"<?=$this->article->isHomepageHidden() ? ' checked' : '';?>>&nbsp;
         <?php if (!$this->article->isHomepageHidden()):?>Zaznacz, by ukryć na stronie głównej<?php else:?>Odznacz, by ponownie pokazać na stronie głównej<?php endif;?>
         </label>
         <p class="text-muted">Ukryty artykuł będzie widoczny tylko w widoku kategorii.</p>
@@ -164,4 +169,4 @@
   </div>
 </form>
 
-<?php include '_foot.html.php';?>
+<?php include '_foot.html.php';

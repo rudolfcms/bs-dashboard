@@ -1,4 +1,7 @@
+<?php
 
+/** @var \Rudolf\Framework\View\AdminView $this */
+?>
       </div>
     </div>
   </div>

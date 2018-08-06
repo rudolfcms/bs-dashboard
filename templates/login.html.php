@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+<?php
+
+/** @var \Rudolf\Modules\Users\One\Login\View $this */
+
+?><!DOCTYPE html>
 <html lang="pl">
 	<head>
 		<meta charset="utf-8">

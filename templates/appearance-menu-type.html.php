@@ -1,7 +1,7 @@
 <?php
 
-/** @var \Rudolf\Modules\Appearance\Menu\TypeAddView $this */
-/** @var \Rudolf\Modules\Appearance\Menu\MenuType $this->item */
+/** @var \Rudolf\Modules\Appearance\Menu\Type\TypeAddView $this */
+/** @var \Rudolf\Modules\Appearance\Menu\Type\MenuType $this->item */
 
 include '_head.html.php';?>
 

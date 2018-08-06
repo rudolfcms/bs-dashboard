@@ -1,4 +1,8 @@
-<!DOCTYPE html>
+<?php
+
+/** @var \Rudolf\Framework\View\AdminView $this */
+
+?><!DOCTYPE html>
 <html lang="pl">
   <head>
     <?php $this->head->make();?>

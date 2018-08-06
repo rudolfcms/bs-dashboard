@@ -1,15 +1,16 @@
 <?php
 
-$item = $this->page;
+/** @var \Rudolf\Modules\Pages\One\Admin\DelView $this */
+
 include '_head.html.php';?>
 
 <form method="post" action="<?=$this->path;?>">
   <div class="panel panel-default">
     <div class="panel-heading">Czy na pewno chcesz usunąć?</div>
     <div class="panel-body">
-      <p>Tytuł: <b><?=$item->title();?></b></p>
+      <p>Tytuł: <b><?=$this->page->title();?></b></p>
       <p><i class="fa fa-key"></i>
-        Status: <b><?=($item->isPublished()) ? 'opublikowany' : 'szkic';?></b>
+        Status: <b><?= $this->page->isPublished() ? 'opublikowany' : 'szkic';?></b>
       </p>
     </div>
     <div class="panel-footer">
@@ -19,4 +20,4 @@ include '_head.html.php';?>
   </div>
 </form>
 
-<?php include '_foot.html.php';?>
+<?php include '_foot.html.php';
