@@ -8,7 +8,7 @@
 include '_head.html.php'; ?>
 
 <?php if ($this->loop->isItems()): ?>
-    <table class="table table-hover table-responsive-md table-sm table-striped">
+    <table class="table table-hover table-responsive-lg table-sm table-striped">
         <thead>
         <tr>
             <th>ID</th>
