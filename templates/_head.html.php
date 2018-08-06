@@ -9,13 +9,13 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow" role="navigation">
-    <a class="navbar-brand col-sm-3 col-md-2 col- mr-0 text-truncate" href="<?= $this->adminDir(); ?>"><?= strip_tags(GENERAL_SITE_NAME); ?></a>
+    <a class="navbar-brand col-9 col-sm-3 col-md-2 mr-0 text-truncate" href="<?= $this->adminDir(); ?>"><?= strip_tags(GENERAL_SITE_NAME); ?></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
             aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav pull-right">
+        <ul class="navbar-nav m-md-0 m-3">
             <li class="nav-item">
                 <a class="nav-link" href="<?= DIR; ?>/"><span class="fa fa-eye"></span> Strona</a>
             </li>
