@@ -29,7 +29,8 @@ include '_head.html.php'; ?>
                 <div class="form-group row">
                     <label for="author" class="col-sm-2 col-form-label">Autor wyświetlany</label>
                     <div class="col-sm-10">
-                        <input type="text" id="author" name="author" value="<?= $this->article->author('raw', false); ?>"
+                        <input type="text" id="author" name="author"
+                               value="<?= $this->article->author('raw', false); ?>"
                                placeholder="Autor wyświetlany" class="form-control">
                         <p class="text-muted">Autor artykułu. Gdy pole puste, wyświetlanie jako autora osoby która
                             dodała artykuł.</p>
@@ -164,7 +165,8 @@ include '_head.html.php'; ?>
                     <a class="btn btn-outline-danger btn-lg btn-block" href="<?= $this->article->delUrl(); ?>">Usuń</a>
                 <?php endif; ?>
 
-                <a class="btn btn-outline-secondary btn-lg btn-block" href="<?= $this->adminDir(); ?>/articles">Anuluj</a>
+                <a class="btn btn-outline-secondary btn-lg btn-block"
+                   href="<?= $this->adminDir(); ?>/articles">Anuluj</a>
 
                 <?php if ('edit' === $this->templateType): ?>
                     <hr>
@@ -176,7 +178,8 @@ include '_head.html.php'; ?>
                             <li class="list-group-item">Data dodania: <b><?= $this->article->added(); ?></b></li>
                             <?php if ($this->article->isModified()): ?>
                                 <li class="list-group-item">Modyfikacja: <b><?= $this->article->modified(); ?></b></li>
-                                <li class="list-group-item">Ostatnio edytował: <b><?= $this->article->modifierFullName(); ?></b></li>
+                                <li class="list-group-item">Ostatnio edytował: <b><?= $this->article->modifierFullName(
+                                        ); ?></b></li>
                             <?php endif; ?>
                             <li class="list-group-item">Liczba odsłon: <b><?= $this->article->views(); ?></b></li>
                             <li class="list-group-item">Odnośnik do artykułu: <b>
@@ -193,7 +196,8 @@ include '_head.html.php'; ?>
                             <b><?= $this->article->isPublished() ? 'opublikowany' : 'szkic'; ?></b>
                         </p>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="published" name="published" <?= $this->article->isPublished() ? ' checked' : ''; ?>>
+                            <input class="form-check-input" type="checkbox" id="published"
+                                   name="published" <?= $this->article->isPublished() ? ' checked' : ''; ?>>
                             <label class="form-check-label" for="published">
                                 <?php if (!$this->article->isPublished()): ?>Zaznacz, by opublikować
                                 <?php else: ?>Odznacz, by zamienić w szkic<?php endif; ?>
@@ -208,10 +212,12 @@ include '_head.html.php'; ?>
                 <div class="card">
                     <div class="card-body">
                         <p><i class="fa fa-eye"></i> Widoczność:
-                            <b><?= $this->article->isHomepageHidden() ? 'Niewidoczny na głównej' : 'Widoczny wszędzie'; ?></b>
+                            <b><?= $this->article->isHomepageHidden(
+                                ) ? 'Niewidoczny na głównej' : 'Widoczny wszędzie'; ?></b>
                         </p>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="homepage_hidden" name="homepage_hidden" <?= $this->article->isHomepageHidden() ? ' checked' : ''; ?>>
+                            <input class="form-check-input" type="checkbox" id="homepage_hidden"
+                                   name="homepage_hidden" <?= $this->article->isHomepageHidden() ? ' checked' : ''; ?>>
                             <label class="form-check-label" for="homepage_hidden">
                                 <?php if (!$this->article->isHomepageHidden()): ?>Zaznacz, by ukryć na stronie głównej
                                 <?php else: ?>Odznacz, by ponownie pokazać na stronie głównej<?php endif; ?>

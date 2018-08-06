@@ -29,7 +29,8 @@ include '_head.html.php'; ?>
                 </div>
 
                 <div class="form-group row">
-                    <label for="thumb_width" class="col-sm-2 col-form-label col-form-label-sm">Szerokość miniatur</label>
+                    <label for="thumb_width" class="col-sm-2 col-form-label col-form-label-sm">Szerokość
+                        miniatur</label>
                     <div class="col-sm-10">
                         <input type="number" min="0" id="thumb_width" name="thumb_width"
                                value="<?= $this->gallery->thumbsWidth(); ?>" placeholder="Szerokość miniatur"
@@ -38,7 +39,8 @@ include '_head.html.php'; ?>
                 </div>
 
                 <div class="form-group row">
-                    <label for="thumb_height" class="col-sm-2 col-form-label col-form-label-sm">Wysokość miniatur</label>
+                    <label for="thumb_height" class="col-sm-2 col-form-label col-form-label-sm">Wysokość
+                        miniatur</label>
                     <div class="col-sm-10">
                         <input type="number" min="0" id="thumb_height" name="thumb_height"
                                value="<?= $this->gallery->thumbsHegiht(); ?>" placeholder="Wysokość miniatur"
@@ -80,12 +82,14 @@ include '_head.html.php'; ?>
                                             <td><?= ++$key; ?></td>
                                             <td>
                                                 <a href="<?= $value['photo']; ?>" target="_blank">
-                                                    <img src="<?= $value['thumb']; ?>" width="100" height="75" alt="<?= $value['alt']; ?>">
+                                                    <img src="<?= $value['thumb']; ?>" width="100" height="75"
+                                                         alt="<?= $value['alt']; ?>">
                                                 </a>
                                             </td>
                                             <td><?= $value['alt']; ?></td>
                                             <td>
-                                                <button class="btn btn-danger" name="delete" value="<?= $value['alt']; ?>">
+                                                <button class="btn btn-danger" name="delete"
+                                                        value="<?= $value['alt']; ?>">
                                                     Usuń
                                                 </button>
                                             </td>
@@ -113,7 +117,8 @@ include '_head.html.php'; ?>
                     <a class="btn btn-outline-danger btn-lg btn-block" href="<?= $this->gallery->delUrl(); ?>">Usuń</a>
                 <?php endif; ?>
 
-                <a class="btn btn-outline-secondary btn-lg btn-block" href="<?= $this->adminDir(); ?>/gallerys">Anuluj</a>
+                <a class="btn btn-outline-secondary btn-lg btn-block"
+                   href="<?= $this->adminDir(); ?>/gallerys">Anuluj</a>
 
                 <?php if ('edit' === $this->templateType): ?>
                     <hr>
@@ -125,7 +130,8 @@ include '_head.html.php'; ?>
                             <li class="list-group-item">Data dodania: <b><?= $this->gallery->added(); ?></b></li>
                             <?php if ($this->gallery->isModified()): ?>
                                 <li class="list-group-item">Modyfikacja: <b><?= $this->gallery->modified(); ?></b></li>
-                                <li class="list-group-item">Ostatnio edytował: <b><?= $this->gallery->modifierFullName(); ?></b></li>
+                                <li class="list-group-item">Ostatnio edytował:
+                                    <b><?= $this->gallery->modifierFullName(); ?></b></li>
                             <?php endif; ?>
                             <li class="list-group-item">Kod galerii: <code><?= $this->gallery->code(); ?></code></li>
                         </ul>

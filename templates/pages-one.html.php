@@ -27,7 +27,8 @@ include '_head.html.php'; ?>
                         <select class="custom-select" id="parent_id" name="parent_id">
                             <option value="0">(brak)</option>
                             <?php foreach ($this->pages() as $key => $value): ?>
-                                <option <?= ($value['id'] == $this->page->parentID()) ? 'selected="selected" ' : ''; ?>value="<?= $value['id']; ?>">
+                                <option <?= ($value['id'] == $this->page->parentID()) ? 'selected="selected" ' : ''; ?>
+                                        value="<?= $value['id']; ?>">
                                     <?= $value['title']; ?></option>
                             <?php endforeach; ?>
                         </select>
@@ -48,7 +49,8 @@ include '_head.html.php'; ?>
                 <div class="form-group row">
                     <label for="description" class="col-sm-2 col-form-label col-form-label-sm">Opis strony</label>
                     <div class="col-sm-10">
-                        <input type="text" id="description" name="description" value="<?= $this->page->description('raw'); ?>"
+                        <input type="text" id="description" name="description"
+                               value="<?= $this->page->description('raw'); ?>"
                                placeholder="Opis" class="form-control form-control-sm">
                         <p class="text-muted">Jest widoczny w wynikach wyszukiwania. Staraj się jak najlepiej opisać
                             zawartość strony. Opis i słowa kluczowe <b>nie mogą</b> być takie same.</p>
@@ -78,7 +80,8 @@ include '_head.html.php'; ?>
                     <a class="btn btn-outline-danger btn-lg btn-block" href="<?= $this->page->delUrl(); ?>">Usuń</a>
                 <?php endif; ?>
 
-                <a class="btn btn-outline-secondary btn-lg btn-block" href="<?= $this->adminDir(); ?>/articles">Anuluj</a>
+                <a class="btn btn-outline-secondary btn-lg btn-block"
+                   href="<?= $this->adminDir(); ?>/articles">Anuluj</a>
 
                 <?php if ('edit' === $this->templateType): ?>
                     <hr>
@@ -89,7 +92,8 @@ include '_head.html.php'; ?>
                             <li class="list-group-item">Data dodania: <b><?= $this->page->added(); ?></b></li>
                             <?php if ($this->page->isModified()): ?>
                                 <li class="list-group-item">Modyfikacja: <b><?= $this->page->modified(); ?></b></li>
-                                <li class="list-group-item">Ostatnio edytował: <b><?= $this->page->modifierFullName(); ?></b></li>
+                                <li class="list-group-item">Ostatnio edytował: <b><?= $this->page->modifierFullName(
+                                        ); ?></b></li>
                             <?php endif; ?>
                             <li class="list-group-item">Liczba odsłon: <b><?= $this->page->views(); ?></b></li>
                             <li class="list-group-item">Odnośnik do strony: <b>
@@ -106,7 +110,8 @@ include '_head.html.php'; ?>
                             <b><?= $this->page->isPublished() ? 'opublikowany' : 'szkic'; ?></b>
                         </p>
                         <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="published" name="published" <?= $this->page->isPublished() ? ' checked' : ''; ?>>
+                            <input class="form-check-input" type="checkbox" id="published"
+                                   name="published" <?= $this->page->isPublished() ? ' checked' : ''; ?>>
                             <label class="form-check-label" for="published">
                                 <?php if (!$this->page->isPublished()): ?>Zaznacz, by opublikować
                                 <?php else: ?>Odznacz, by zamienić w szkic<?php endif; ?>

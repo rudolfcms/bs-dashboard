@@ -7,7 +7,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Panel logowania | <?=strip_tags(GENERAL_SITE_NAME);?></title>
+    <title>Panel logowania | <?= strip_tags(GENERAL_SITE_NAME); ?></title>
     <link href="<?= $this->themePath; ?>/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="<?= $this->themePath; ?>/css/singin.css" rel="stylesheet">
 </head>

@@ -80,7 +80,8 @@ include '_head.html.php'; ?>
                             <li class="list-group-item">Data dodania: <b><?= $this->category->added(); ?></b></li>
                             <?php if ($this->category->isModified()): ?>
                                 <li class="list-group-item">Modyfikacja: <b><?= $this->category->modified(); ?></b></li>
-                                <li class="list-group-item">Ostatnio edytował: <b><?= $this->category->modifierFullName(); ?></b></li>
+                                <li class="list-group-item">Ostatnio edytował:
+                                    <b><?= $this->category->modifierFullName(); ?></b></li>
                             <?php endif; ?>
                             <li class="list-group-item">Liczba odsłon: <b><?= $this->category->views(); ?></b></li>
                             <li class="list-group-item">Odnośnik do kategorii: <b>
