@@ -23,7 +23,7 @@
                 <a class="nav-link" href="#"><span class="fa fa-cog"></span> Ustawienia</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#"><span class="fa fa-question-circle"></span> Pomoc</a>
+                <a class="nav-link" href="https://github.com/rudolfcms/rudolf/issues"><span class="fa fa-question-circle"></span> Pomoc</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="<?= DIR; ?>/user/profile"><span class="fa fa-user"></span> Profil</a>
