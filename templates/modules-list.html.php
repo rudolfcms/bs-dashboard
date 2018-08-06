@@ -12,8 +12,7 @@ include '_head.html.php'; ?>
             <th>ID</th>
             <th>Nazwa</th>
             <th>Status</th>
-            <th>Wyłącz/włącz</th>
-            <th>Edytuj</th>
+            <th style="width: 100px">Wyłącz/włącz</th>
         </tr>
         </thead>
         <tbody>
@@ -24,14 +23,12 @@ include '_head.html.php'; ?>
 
                 <?php if ($a->status()): ?>
                     <td class="text-success">Włączony</td>
-                    <td><a href="<?= $a->offUrl(); ?>" class="btn btn-warning btn-sm">Wyłącz</a></td>
+                    <td class="text-center"><a href="<?= $a->offUrl(); ?>" class="btn btn-warning btn-sm">Wyłącz</a></td>
 
                 <?php else: ?>
                     <td class="text-muted">Wyłączony</td>
-                    <td><a href="<?= $a->onUrl(); ?>" class="btn btn-success btn-sm">Włącz</a></td>
+                    <td class="text-center"><a href="<?= $a->onUrl(); ?>" class="btn btn-success btn-sm">Włącz</a></td>
                 <?php endif; ?>
-
-                <td><a href="<?= $a->editUrl(); ?>" class="btn btn-outline-primary btn-sm">Edytuj</a></td>
             </tr>
         <?php endwhile; ?>
         </tbody>
