@@ -1,4 +1,11 @@
-<?php include '_head.html.php';?>
+<?php
+
+/** @var \Rudolf\Modules\Albums\Category\Roll\Admin\View $this */
+/** @var \Rudolf\Modules\Articles\Category\Roll\Admin\View $this */
+/** @var \Rudolf\Modules\Albums\Category\One\Admin\Category $c */
+/** @var \Rudolf\Modules\Articles\Category\One\Admin\Category $c */
+
+include '_head.html.php';?>
 
 <?php if ($this->loop->isItems()): ?>
 <table class="table table-hover table-striped">
@@ -31,8 +38,8 @@
 
 <?php if ($this->loop->isPagination()): ?> 
   <nav role="navigation" class="pagination-container">
-    <?=$this->loop->nav(['ul' => 'pagination', 'current' => 'active'], 1);?>
+    <?=$this->loop->nav(['ul' => 'pagination', 'li_current' => 'active'], 1);?>
   </nav>
 <?php endif;?> 
 
-<?php include '_foot.html.php';?>
+<?php include '_foot.html.php';

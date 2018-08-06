@@ -1,4 +1,9 @@
-<?php include '_head.html.php'; ?>
+<?php
+
+/** @var \Rudolf\Modules\Modules\Roll\Admin\View $this */
+/** @var \Rudolf\Modules\Modules\One\Admin\Module $a */
+
+include '_head.html.php'; ?>
 
 <?php if ($this->loop->isItems()): ?>
 <table class="table table-hover table-striped">
@@ -34,7 +39,7 @@
 
 <?php if ($this->loop->isPagination()): ?> 
   <nav role="navigation" class="pagination-container">
-    <?=$this->loop->nav(['ul' => 'pagination', 'current' => 'active'], 2);?>
+    <?=$this->loop->nav(['ul' => 'pagination', 'li_current' => 'active'], 2);?>
   </nav>
 <?php endif;?> 
 
@@ -42,4 +47,4 @@
   <div class="alert alert-info">Brak modułów do wyświetlenia!</div>
 <?php endif;?> 
 
-<?php include '_foot.html.php'; ?>
+<?php include '_foot.html.php';
