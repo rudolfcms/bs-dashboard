@@ -13,8 +13,8 @@ include '_head.html.php'; ?>
             <th>Tytuł</th>
             <th>Modyfikacja</th>
             <th>Dodano</th>
-            <th>Edytuj</th>
-            <th>Usuń</th>
+            <th style="width: 100px">Edytuj</th>
+            <th style="width: 100px">Usuń</th>
         </tr>
         </thead>
         <tbody>

@@ -8,14 +8,14 @@
 include '_head.html.php'; ?>
 
 <?php if ($this->loop->isItems()): ?>
-    <table class="table table-hover table-striped">
+    <table class="table table-hover table-responsive-lg table-sm table-striped">
         <thead>
         <tr>
             <th>ID</th>
             <th>Tytuł</th>
             <th>Ilość</th>
-            <th>Edytuj</th>
-            <th>Usuń</th>
+            <th style="width: 100px">Edytuj</th>
+            <th style="width: 100px">Usuń</th>
         </tr>
         </thead>
         <tbody>
