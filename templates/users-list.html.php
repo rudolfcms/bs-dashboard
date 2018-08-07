@@ -31,7 +31,7 @@ include '_head.html.php'; ?>
                         <span class="fa fa-edit"></span> Edytuj</a>
                 </td>
                 <td>
-                    <a href="<?= $a->delUrl(); ?>" class="btn btn-outline-danger btn-sm">
+                    <a href="<?= $a->delUrl(); ?>" class="btn btn-outline-danger btn-sm <?=$a->id() === $this->getUserId() ? 'disabled' : '';?>">
                         <span class="fa fa-remove"></span> Usuń</a>
                 </td>
             </tr>
