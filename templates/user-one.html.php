@@ -43,11 +43,13 @@ include '_head.html.php'; ?>
                 <div class="form-group row">
                     <div class="col-sm-2 col-form-label">Aktywne</div>
                     <div class="col-sm-10 btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-secondary <?=$this->user->isActive() ? 'active' : ''; ?>">
-                            <input type="radio" name="active" autocomplete="off" value="1" <?=$this->user->isActive() ? 'checked' : ''; ?>> Aktywne
+                        <label class="btn btn-secondary <?= $this->user->isActive() ? 'active' : ''; ?>">
+                            <input type="radio" name="active" autocomplete="off" value="1" <?= $this->user->isActive(
+                            ) ? 'checked' : ''; ?>> Aktywne
                         </label>
-                        <label class="btn btn-secondary <?=!$this->user->isActive() ? 'active' : ''; ?>">
-                            <input type="radio" name="active" autocomplete="off" value="0" <?=!$this->user->isActive() ? 'checked' : ''; ?>> Nieaktywne
+                        <label class="btn btn-secondary <?= !$this->user->isActive() ? 'active' : ''; ?>">
+                            <input type="radio" name="active" autocomplete="off" value="0" <?= !$this->user->isActive(
+                            ) ? 'checked' : ''; ?>> Nieaktywne
                         </label>
                     </div>
                 </div>
@@ -55,7 +57,8 @@ include '_head.html.php'; ?>
                 <hr>
 
                 <div class="form-group row">
-                    <label for="password" class="col-sm-2 col-form-label">Nowe hasło</label>
+                    <label for="password" class="col-sm-2 col-form-label">
+                        <?php if ('edit' === $this->templateType): ?>Nowe h<?php else: ?>H<?php endif; ?>asło</label>
                     <div class="col-sm-10">
                         <input type="password" class="form-control" name="password" id="password">
                     </div>
@@ -86,7 +89,8 @@ include '_head.html.php'; ?>
                     <div class="card">
                         <div class="card-header">Informacje o użytkowniku</div>
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Data rejestracji: <b><?= $this->user->getRegisterDate(); ?></b></li>
+                            <li class="list-group-item">Data rejestracji: <b><?= $this->user->getRegisterDate(); ?></b>
+                            </li>
                         </ul>
                     </div>
                 <?php endif; ?>
