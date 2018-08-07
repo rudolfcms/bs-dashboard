@@ -1,9 +1,10 @@
 html,
-body {
+body,
+.wrapper {
   height: 100%;
 }
 
-body {
+.wrapper {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
