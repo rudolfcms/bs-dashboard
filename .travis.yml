@@ -1,0 +1,23 @@
+language: node_js
+
+node_js:
+- '8'
+
+install:
+- npm install
+
+script:
+- npm run build
+
+before_deploy:
+- zip -r bs-dashboard.zip css img js templates theme.php
+
+deploy:
+  provider: releases
+  api_key:
+    secure: B4+JqO+l1yBWoF+5F+EJoNbJkhJsuNUBxHREvD4KybooHZRjz4HSlEBB9kHpB4dtOeNTmjdeSQ7deZKvETY1jbqIi2ssRSt6yKH6hrCN0XUtIQzk4Ww2XEbE1T8f+jhNHtAJJsDABWS1p7hrooHbXf4iQJJHYodHkJ6dpubkfp9YJTt/LeW555BNfFt/pap3OorTsmX1TwT7BGxdxw4NVzmmjydr9ZJW6N9aYCUYd7DIzhOZCM8xAxNTAvtKhQ921V6Vloijmg3r8QXq3cPx7PpqLUYNrX2gE5sst6+WcEZO3H9SZQq7lewR6GeEmghnLFNu23rwgV8mdRyWC8ZsSFe29ZMZnPgCQrhGcgf+veZR4rgjPZLw9Ry7jXP/RoLC2TZRsh5M15BizFNfS+Dx4jTEngiIKsF3gQoDIZJpo/4fZb+koeo5Wq9ySMf1HLim1cyIZ/TAGqEmCbdXjv99ZihOw/1+pF+EapdNeWOBFON1Tsw+y3zlYty5x9zFecX2CRlfW3mBu4Kr4sMwfhSmumKn5vfU9L59lxa9WE3wvgfs4b0DCP3g+uJP9wl6vDeOGzPnSj3O7IXxDhw7f0naK3bFfT9SL07us9ipAOkyDxSRg4PiXJHqdvzapqdkObNG3dnoov/q7L79yCeCrNbMwsm6JHmXUBCTa7aMmTCpTeI=
+  file: bs-dashboard.zip
+  skip_cleanup: true
+  on:
+    tags: true
+    repo: rudolfcms/bs-dashboard

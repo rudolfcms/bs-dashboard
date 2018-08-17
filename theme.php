@@ -9,15 +9,15 @@ class bs_dashboard extends Theme
     public function init()
     {
         $this->addHeadBefore('<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">');
-        $this->addStylesheet($this->path.'/node_modules/bootstrap/dist/css/bootstrap.min.css');
+        $this->addStylesheet($this->path.'/css/bootstrap.min.css');
         $this->addStylesheet('https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css');
 
         $this->addStylesheet($this->path.'/css/dashboard.css');
         $this->addStylesheet($this->path.'/css/custom.css');
 
         $this->addFootBefore('<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script>window.jQuery || document.write("<script src=\''.$this->path.'/node_modules/jquery/dist/jquery.min.js\'><script>")</script>');
-        $this->addScript($this->path.'/node_modules/bootstrap/dist/js/bootstrap.min.js');
+    <script>window.jQuery || document.write("<script src=\''.$this->path.'/js/jquery.min.js\'><script>")</script>');
+        $this->addScript($this->path.'/js/bootstrap.min.js');
         $this->addFootAfter('<script>
         $(".treeview").on("click", ".caret-container", function(e) {
           e.stopPropagation();

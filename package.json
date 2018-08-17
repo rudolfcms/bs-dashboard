@@ -4,7 +4,7 @@
   "description": "bsdashboard theme for Rudolf",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "cp ./node_modules/bootstrap/dist/css/bootstrap.min.css ./css/ && mkdir -p ./js && cp ./node_modules/bootstrap/dist/js/bootstrap.min.js ./js/ && cp ./node_modules/jquery/dist/jquery.min.js ./js/"
   },
   "repository": {
     "type": "git",
