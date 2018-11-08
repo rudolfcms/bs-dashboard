@@ -27,9 +27,12 @@ include '_head.html.php'; ?>
                         <select class="custom-select" id="parent_id" name="parent_id">
                             <option value="0">(brak)</option>
                             <?php foreach ($this->pages() as $key => $value): ?>
-                                <option <?= ($value['id'] == $this->page->parentID()) ? 'selected="selected" ' : ''; ?>
-                                        value="<?= $value['id']; ?>">
-                                    <?= $value['title']; ?></option>
+                                <?php if ($value['id'] !== $this->page->id()): ?>
+                                    <option <?= ($value['id'] == $this->page->parentID()) ? 'selected="selected" ' : ''; ?>
+                                            value="<?= $value['id']; ?>">
+                                        <?= $value['id']; ?> - <?= $value['title']; ?>
+                                    </option>
+                                <?php endif; ?>
                             <?php endforeach; ?>
                         </select>
                     </div>
