@@ -1,6 +1,6 @@
 {
   "name": "bs-dashboard",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "bsdashboard theme for Rudolf",
   "main": "index.js",
   "scripts": {
